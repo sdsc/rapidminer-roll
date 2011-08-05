@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="no"?>
+
+<graph>
+
+<description>
+rapidminer
+http://rapid-i.com
+</description>
+
+<copyright>
+Copyright (c) 2000 - 2011 The Regents of the University of California.
+All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
+</copyright>
+
+<changelog>
+</changelog>
+
+<edge from="base">
+  <to>rapidminer-common</to>
+</edge>
+<order head="base">
+  <tail>rapidminer-common</tail>
+</order>
+
+<edge from="server">
+  <to>rapidminer-server</to>
+</edge>
+<order head="server">
+  <tail>rapidminer-server</tail>
+</order>
+
+<edge from="envmodules-common">
+  <to>rapidminer-modules-common</to>
+</edge>
+<order head="envmodules-common">
+  <tail>rapidminer-modules-common</tail>
+</order>
+
+<edge from="base">
+  <to>rapidminer-roll-test</to>
+</edge>
+<order head="base">
+  <tail>rapidminer-roll-test</tail>
+</order>
+
+<order head="rapidminer-common">
+  <tail>rapidminer-modules-common</tail>
+</order>
+
+</graph>
