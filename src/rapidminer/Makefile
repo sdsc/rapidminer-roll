@@ -73,6 +73,7 @@ install::
 	chmod 0775 $(ROOT)/$(PKGROOT)/bin/rapidminer
 	cp $(SOURCE)/scripts/RapidMinerGUI   $(ROOT)/$(PKGROOT)/bin
 	chmod 0775 $(ROOT)/$(PKGROOT)/bin/RapidMinerGUI
+	cp patch-files/rapidminer $(ROOT)/$(PKGROOT)/bin/
 
 clean::
 	rm -rf $(NAME)-$(VERSION)
