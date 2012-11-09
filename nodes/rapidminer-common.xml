@@ -17,12 +17,6 @@ All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
 
 <package>rapidminer</package>
 <package>rapidminer-modules</package>
-
-<post>
-<file name="/opt/rapidminer/bin/rapidminer" perms="0755">
-#!/bin/bash
-java -jar /opt/rapidminer/lib/rapidminer.jar
-</file>
-</post>
+<package>rapidminer-roll-test</package>
 
 </kickstart>

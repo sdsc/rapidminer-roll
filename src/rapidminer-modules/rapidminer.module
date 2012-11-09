@@ -1,2 +1,3 @@
 #%Module1.0
+setenv RAPIDMINER_HOME /opt/rapidminer
 prepend-path PATH /opt/rapidminer/bin
