@@ -67,6 +67,7 @@ install::
 	mkdir -p $(ROOT)/$(PKGROOT)
 	mkdir -p $(ROOT)/$(PKGROOT)/bin
 	mkdir -p $(ROOT)/$(PKGROOT)/lib
+	mkdir -p $(ROOT)/$(PKGROOT)/resources
 	tar xvf $(NAME)-$(VERSION).tgz
 	cp -r $(SOURCE)/lib/*  $(ROOT)/$(PKGROOT)/lib
 	cp $(SOURCE)/scripts/rapidminer   $(ROOT)/$(PKGROOT)/bin
