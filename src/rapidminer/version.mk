@@ -2,6 +2,7 @@ NAME               = rapidminer
 VERSION            = 5.2.008
 RELEASE            = 1
 PKGROOT            = /opt/rapidminer
+RPM.EXTRAS         = AutoReq:No
 
 SRC_SUBDIR         = rapidminer
 
