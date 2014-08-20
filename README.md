@@ -22,7 +22,7 @@ Rocks development machine.
 
 ## Dependencies
 
-Unknown at this time.
+None.
 
 
 ## Building
@@ -70,10 +70,4 @@ run the test scripts execute the following command(s):
 
 ```shell
 % /root/rolltests/rapidminer.t 
-ok 1 - rapidminer is installed
-ok 2 - rapidminer test run
-ok 3 - rapidminer module installed
-ok 4 - rapidminer version module installed
-ok 5 - rapidminer version module link created
-1..5
 ```
