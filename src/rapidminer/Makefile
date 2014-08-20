@@ -57,6 +57,7 @@
 # $Log$
 
 REDHAT.ROOT = $(CURDIR)/../../
+PKGROOT = /opt/rapidminer
 
 -include $(ROCKSROOT)/etc/Rules.mk
 include Rules.mk
@@ -71,11 +72,10 @@ install::
 	mkdir -p -m 755 $(ROOT)/$(PKGROOT)/lib
 	mkdir -p -m 755 $(ROOT)/$(PKGROOT)/resources
 	cp -r $(SOURCE_DIR)/lib/*  $(ROOT)/$(PKGROOT)/lib
-	cp $(SOURCE_DIR)/scripts/rapidminer   $(ROOT)/$(PKGROOT)/bin
-	chmod 0775 $(ROOT)/$(PKGROOT)/bin/rapidminer
-	cp $(SOURCE_DIR)/scripts/RapidMinerGUI   $(ROOT)/$(PKGROOT)/bin
+	cp $(SOURCE_DIR)/scripts/rapidminer \
+	   $(SOURCE_DIR)/scripts/RapidMinerGUI $(ROOT)/$(PKGROOT)/bin/
+	chmod 0775 $(ROOT)/$(PKGROOT)/bin/*
 	cp -r $(SOURCE_DIR)/resources/* $(ROOT)/$(PKGROOT)/resources
-	chmod 0775 $(ROOT)/$(PKGROOT)/bin/RapidMinerGUI
 	@echo "::: Package $(NAME) install complete :::"
 
 clean::
