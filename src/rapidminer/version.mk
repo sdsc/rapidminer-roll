@@ -1,15 +1,16 @@
-NAME               = rapidminer
-VERSION            = 5.2.008
-RELEASE            = 1
-RPM.EXTRAS         = AutoReq:No
+NAME           = rapidminer
+VERSION        = 5.2.008
+RELEASE        = 1
+PKGROOT        = /opt/rapidminer
 
-SRC_SUBDIR         = rapidminer
+SRC_SUBDIR     = rapidminer
 
-SOURCE_NAME        = $(NAME)
-SOURCE_VERSION     = $(VERSION)
-SOURCE_SUFFIX      = tgz
-SOURCE_PKG         = $(SOURCE_NAME)-$(SOURCE_VERSION).$(SOURCE_SUFFIX)
-SOURCE_DIR         = $(SOURCE_PKG:%.$(SOURCE_SUFFIX)=%)
+SOURCE_NAME    = $(NAME)
+SOURCE_SUFFIX  = tgz
+SOURCE_VERSION = $(VERSION)
+SOURCE_PKG     = $(SOURCE_NAME)-$(SOURCE_VERSION).$(SOURCE_SUFFIX)
+SOURCE_DIR     = $(SOURCE_PKG:%.$(SOURCE_SUFFIX)=%)
 
-TGZ_PKGS           = $(SOURCE_PKG)
+TGZ_PKGS       = $(SOURCE_PKG)
 
+RPM.EXTRAS     = AutoReq:No
