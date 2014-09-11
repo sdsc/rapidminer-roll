@@ -5,7 +5,7 @@ PKGROOT        = /opt/rapidminer
 
 SRC_SUBDIR     = rapidminer
 
-SOURCE_NAME    = $(NAME)
+SOURCE_NAME    = rapidminer
 SOURCE_SUFFIX  = tgz
 SOURCE_VERSION = $(VERSION)
 SOURCE_PKG     = $(SOURCE_NAME)-$(SOURCE_VERSION).$(SOURCE_SUFFIX)
