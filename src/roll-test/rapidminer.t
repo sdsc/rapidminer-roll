@@ -23,7 +23,6 @@ SKIP: {
   skip 'rapidminer not installed', 4 if ! $isInstalled;
   fail('Need to write rapidminer execution test');
 
-  skip 'modules not installed', 3 if ! -f '/etc/profile.d/modules.sh';
   `/bin/ls /opt/modulefiles/applications/rapidminer/[0-9]* 2>&1`;
   ok($? == 0, 'rapidminer module installed');
   `/bin/ls /opt/modulefiles/applications/rapidminer/.version.[0-9]* 2>&1`;
