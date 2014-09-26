@@ -1,5 +1,9 @@
-NAME       = rapidminer-modules
-VERSION    = 5.2.008
-RELEASE    = 1
+NAME        = rapidminer-modules
+RELEASE     = 2
+PKGROOT     = /opt/modulefiles/applications/rapidminer
 
-RPM.EXTRAS = AutoReq:No
+VERSION_SRC = $(REDHAT.ROOT)/src/rapidminer/version.mk
+VERSION_INC = version.inc
+include $(VERSION_INC)
+
+RPM.EXTRAS  = AutoReq:No
