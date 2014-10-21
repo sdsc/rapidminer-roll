@@ -71,10 +71,9 @@ install::
 	mkdir -p -m 755 $(ROOT)/$(PKGROOT)/lib
 	mkdir -p -m 755 $(ROOT)/$(PKGROOT)/resources
 	cp -r $(SOURCE_DIR)/lib/*  $(ROOT)/$(PKGROOT)/lib
-	cp $(SOURCE_DIR)/scripts/rapidminer \
-	   $(SOURCE_DIR)/scripts/RapidMinerGUI $(ROOT)/$(PKGROOT)/bin/
+	cp $(SOURCE_DIR)/RapidMiner-Studio.sh \
+	   $(SOURCE_DIR)/scripts/rapidminer-batch.sh $(ROOT)/$(PKGROOT)/bin/
 	chmod 0775 $(ROOT)/$(PKGROOT)/bin/*
-	cp -r $(SOURCE_DIR)/resources/* $(ROOT)/$(PKGROOT)/resources
 	@echo "::: Package $(NAME) install complete :::"
 
 clean::
