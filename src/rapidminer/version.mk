@@ -1,6 +1,6 @@
-NAME           = rapidminer
+NAME           = sdsc-rapidminer
 VERSION        = 6.1.0
-RELEASE        = 0
+RELEASE        = 1
 PKGROOT        = /opt/rapidminer
 
 SRC_SUBDIR     = rapidminer

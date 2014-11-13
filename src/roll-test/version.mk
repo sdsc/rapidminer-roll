@@ -1,6 +1,6 @@
-NAME       = rapidminer-roll-test
+NAME       = sdsc-rapidminer-roll-test
 VERSION    = 1
-RELEASE    = 1
+RELEASE    = 2
 PKGROOT    = /root/rolltests
 
 RPM.EXTRAS = AutoReq:No

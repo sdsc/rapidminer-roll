@@ -60,22 +60,35 @@ REDHAT.ROOT = $(CURDIR)/../../
 
 -include $(ROCKSROOT)/etc/Rules.mk
 include Rules.mk
-include pull.mk
+include $(SDSCDEVEL)/Pull.mk
+include $(SDSCDEVEL)/Rules.mk
+
+LICENSE_FILES = $(SOURCE_DIR)/EULA
+
+$(NAME).spec: DESCRIPTION LICENSE
+
+DESCRIPTION:
+	( \
+	  $(DESCRIBE_PKG) \
+	) > $@
+
+LICENSE: $(SRC_DIRS)
+	#if ! grep -q "GNU GENERAL PUBLIC LICENSE" $(SOURCE_DIR)/COPYING; then \
+	#  exit 2; \
+	#fi
+	echo rapidminer > $@
 
 build: $(SRC_DIRS)
 	@echo "::: Package $(NAME) build complete :::"
 	
 install::
-	mkdir -p -m 755 $(ROOT)/$(PKGROOT)
-	mkdir -p -m 755 $(ROOT)/$(PKGROOT)/bin
-	mkdir -p -m 755 $(ROOT)/$(PKGROOT)/lib
-	mkdir -p -m 755 $(ROOT)/$(PKGROOT)/resources
-	cp -r $(SOURCE_DIR)/lib/*  $(ROOT)/$(PKGROOT)/lib
+	mkdir -p -m 755 $(ROOT)/$(PKGROOT) $(ROOT)/$(PKGROOT)/{bin,lib}
+	cp -r $(SOURCE_DIR)/lib/*  $(ROOT)/$(PKGROOT)/lib/
 	cp $(SOURCE_DIR)/RapidMiner-Studio.sh \
 	   $(SOURCE_DIR)/scripts/rapidminer-batch.sh $(ROOT)/$(PKGROOT)/bin/
 	chmod 0775 $(ROOT)/$(PKGROOT)/bin/*
 	@echo "::: Package $(NAME) install complete :::"
 
 clean::
-	rm -rf $(SOURCE_DIR)
+	rm -rf $(SOURCE_DIR) DESCRIPTION LICENSE
 
