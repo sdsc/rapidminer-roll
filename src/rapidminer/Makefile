@@ -63,8 +63,6 @@ include Rules.mk
 include $(SDSCDEVEL)/Pull.mk
 include $(SDSCDEVEL)/Rules.mk
 
-LICENSE_FILES = $(SOURCE_DIR)/EULA
-
 $(NAME).spec: DESCRIPTION LICENSE
 
 DESCRIPTION:
@@ -73,9 +71,7 @@ DESCRIPTION:
 	) > $@
 
 LICENSE: $(SRC_DIRS)
-	#if ! grep -q "GNU GENERAL PUBLIC LICENSE" $(SOURCE_DIR)/COPYING; then \
-	#  exit 2; \
-	#fi
+	$(CHECK_LICENSE_FILES)
 	echo rapidminer > $@
 
 build: $(SRC_DIRS)
@@ -87,6 +83,7 @@ install::
 	cp $(SOURCE_DIR)/RapidMiner-Studio.sh \
 	   $(SOURCE_DIR)/scripts/rapidminer-batch.sh $(ROOT)/$(PKGROOT)/bin/
 	chmod 0775 $(ROOT)/$(PKGROOT)/bin/*
+	$(INSTALL_LICENSE_FILES)
 	@echo "::: Package $(NAME) install complete :::"
 
 clean::
