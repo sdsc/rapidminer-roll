@@ -1,6 +1,6 @@
 NAME           = sdsc-rapidminer
 VERSION        = 7.1.0
-RELEASE        = 0
+RELEASE        = 1
 PKGROOT        = /opt/rapidminer
 
 SRC_SUBDIR     = rapidminer
@@ -13,4 +13,5 @@ SOURCE_DIR     = $(SOURCE_NAME)
 
 ZIP_PKGS       = $(SOURCE_PKG)
 
-RPM.EXTRAS     = AutoReq:No
+RPM.EXTRAS     = AutoReq:No\nAutoProv:No
+RPM.PREFIX     = $(PKGROOT)
